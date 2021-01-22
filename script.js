@@ -43,19 +43,12 @@ let newAnimal = "Myra";
 
 animals.push(newAnimal);
 
-for (let animal in animals) {
-    console.log(animals[animal]);
-}
+// for (let animal in animals) {
+//     console.log(animals[animal]);
+// }
 
-let persons = [
-    {id: 785732934, fName: "Janne", lName: "Kemi", age: 40},
-    {id: 89534032, fName: "Kalle", lName: "Larsson"},
-    {fName: "Anna", lName: "Hopp", adress: 
-        {gata: "Djursholm", stad: "Borlänge"}
-    }
-];
 
-console.log(persons[2].fNAme);
+
 
 let xyz = 11;
 
@@ -93,7 +86,40 @@ myBtn.addEventListener("click", function(){
     
 });
 
+// BONDALIZER
 
+// SKAPA MIN OBJECT ARRAY
+let persons = [
+    {fName: "Janne", lName: "Kemi"},
+    {fName: "Kalle", lName: "Larsson"},
+    {fName: "Lars", lName: "Larsson"},
+    {fName: "Gurra", lName: "Larsson"}
+    
+];
+
+// LÅT BESÖKAREN SKRIVA ETT NAMN SOM VI SKA SÖKA PÅ
+let searchPerson = prompt("Skriv ett förnamn");
+
+// EN VARIABEL SOM HÅLLER KOLL PÅ OM VI HITTAT NÅGON
+// ÄR FALSE FRÅN BÖRJAN OCH ÄNDRAS TILL TRUE VID TRÄFF
+var found = false;
+
+// LOOPA IGENOM HELA LISTAN
+for (person in persons) {   
+    
+    // KOLLA OM DET ÄR PERSONEN VI SÖKER EFTER
+    // ÄNDRA SÖKNING OCH RESULTAT TILL SMÅ BOKSTÄVER SÅ ATT SÖKNING INTE ÄR CASE SENSITIVE
+    if (searchPerson.toLowerCase() == persons[person].fName.toLowerCase()) {
+        console.log("Hittade: ", persons[person].lName + ", " + persons[person].fName + " " + persons[person].lName);
+        // ÄNDRA HITTAT TILL TRUE FÖR ATT VISA ATT VI HITTAT
+        found = true;
+    } 
+}
+
+// KOLLA OM VI HITTAT NÅGON, OM FORTFARANDE FALSE, SKRIV HITTADE EJ
+if (found == false) {
+    console.log("Hittade ingen med det namnet!");
+}
 
 
 
