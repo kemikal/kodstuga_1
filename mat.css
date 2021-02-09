@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mat {
+    display: flex;
+}
+
+.col {
+padding: 20px;
+  flex:1;
+}
+
+img {
+    width: 400px;
+}
