@@ -50,6 +50,8 @@ window.addEventListener("keyup", function(evt){
 
 Promise.all([
     fetch("teams.json").then(response => response.json()),
+    //fetch("finnsinte.json").then(response => response.json()),
+    fetch("felformat.json").then(response => response.json()),
     fetch("heroes.json").then(response => response.json())
 ])
 .then(data => {
@@ -57,10 +59,9 @@ Promise.all([
     let teams = data[1];
 
     console.log("teams", teams[1].heroName);
-
     utanforScope(teams, heroes);
-
 })
+.catch(error => console.log("Error", error));
 
 function utanforScope(teams, heroes) {
 
