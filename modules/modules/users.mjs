@@ -14,7 +14,11 @@ export function addUser(user) {
     // LS Spara
 }
 
+export function setUserName(name) {
+    return name + " är här!";
+}
+
 export function editUsers() {
-    // Editara user
+    // EDIT user
 
 }
