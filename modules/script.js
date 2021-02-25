@@ -2,7 +2,7 @@ import {printUsers} from "./modules/templates.mjs";
 import {users, addUser, userName, isAdmin, setUserName} from "./modules/users.mjs";
 import {land} from './modules/fetch.mjs';
 
-land.then(data => console.log("from fetch module", data));
+land(1).then(data => console.log("from fetch module", data));
 
 console.log(users);
 
